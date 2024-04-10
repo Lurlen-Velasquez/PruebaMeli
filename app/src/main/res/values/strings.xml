@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PruebaMeli</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="buscar">Buscar</string>
+    <string name="cantidad">Cantidad disponible:</string>
+    <string name="precio">Precio:</string>
+    <string name="condicion">Condicion:</string>
 </resources>
