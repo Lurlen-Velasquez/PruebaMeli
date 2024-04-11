@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    tools:context=".ui.fragment.ResultadoBusquedaFragment">
+
+    <ImageView
+        android:id="@+id/IV_image_producto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/img_mercado_libre" />
+
+    <TextView
+        android:id="@+id/TV_titulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxLength="100"
+        android:maxLines="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/IV_image_producto"
+        app:layout_constraintTop_toTopOf="@id/IV_image_producto"
+        tools:text="Titulo detalle de producto" />
+
+    <TextView
+        android:id="@+id/TV_precio_etiqueta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/precio"
+        app:layout_constraintStart_toEndOf="@id/IV_image_producto"
+        app:layout_constraintTop_toBottomOf="@id/TV_titulo" />
+
+    <TextView
+        android:id="@+id/TV_precio_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/TV_precio_etiqueta"
+        app:layout_constraintTop_toBottomOf="@id/TV_titulo"
+        tools:text="12341234" />
+</androidx.constraintlayout.widget.ConstraintLayout>

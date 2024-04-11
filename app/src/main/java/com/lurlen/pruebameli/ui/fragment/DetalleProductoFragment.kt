@@ -4,16 +4,36 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.lurlen.pruebameli.R
+import androidx.fragment.app.activityViewModels
+import com.lurlen.pruebameli.databinding.FragmentDetalleProductoBinding
+import com.lurlen.pruebameli.ui.viewmodel.BusquedaViewModel
 
 class DetalleProductoFragment : Fragment() {
+
+    private lateinit var binding: FragmentDetalleProductoBinding
+    private val viewModel: BusquedaViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_resultado_busqueda, container, false)
+    ): View {
+        binding = FragmentDetalleProductoBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        agregarFlechaToolBar()
+        observeDetalleProducto()
+    }
+
+    private fun agregarFlechaToolBar() {
+        (requireActivity() as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    private fun observeDetalleProducto() {
+
     }
 }
