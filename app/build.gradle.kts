@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.kotlin.ksp)
 }
 
 android {
@@ -60,4 +61,5 @@ dependencies {
     implementation(libs.kotlin.coroutines.android)
     implementation(libs.kotlin.coroutines.test)
     implementation(libs.androidx.fragment.ktx)
+    ksp(libs.moshi.kotlin.codegen)
 }

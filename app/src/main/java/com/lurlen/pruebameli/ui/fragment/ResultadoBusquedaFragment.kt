@@ -15,6 +15,7 @@ import com.lurlen.pruebameli.data.api.Producto
 import com.lurlen.pruebameli.databinding.FragmentResultadoBusquedaBinding
 import com.lurlen.pruebameli.ui.fragment.adapter.CustomAdapter
 import com.lurlen.pruebameli.ui.viewmodel.BusquedaViewModel
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 
 class ResultadoBusquedaFragment : Fragment() {
@@ -57,7 +58,7 @@ class ResultadoBusquedaFragment : Fragment() {
 
     private fun observeVerDetalle() {
         lifecycleScope.launch {
-            viewModel.verDetalle.collect {
+            viewModel.verDetalle.distinctUntilChanged().collect {
                 reemplazarFragment()
             }
         }
