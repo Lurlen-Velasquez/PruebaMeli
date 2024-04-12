@@ -1,0 +1,1 @@
+Esta es la prueba para Mercado Libre, para realizarla tuve que consultar muchos videos y paginas donde explicaban temas que aun no conocia, como lo es Unit Test y coroutines. Fue una prueba muy compleja, espero haber hecho un buen trabajo.
