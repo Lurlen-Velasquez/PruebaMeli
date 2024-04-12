@@ -37,6 +37,9 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    tasks.withType<Test> {
+        useJUnitPlatform()
+    }
 }
 
 dependencies {
@@ -49,6 +52,7 @@ dependencies {
     implementation(libs.androidx.legacy.support.v4)
     implementation(libs.androidx.recyclerview)
     testImplementation(libs.junit)
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.moshi)
@@ -62,4 +66,8 @@ dependencies {
     implementation(libs.kotlin.coroutines.test)
     implementation(libs.androidx.fragment.ktx)
     ksp(libs.moshi.kotlin.codegen)
+    testImplementation(libs.mockk)
+    testImplementation(libs.mockk.android)
+    testImplementation(libs.mockk.agent)
+    androidTestImplementation(libs.mockk.android)
 }
